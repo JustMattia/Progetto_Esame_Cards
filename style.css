@@ -1,0 +1,297 @@
+/* =========================================
+   Reset & Base
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+body {
+  color: #000;
+  background-color: #fff;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+nav a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
+  transition: color 0.2s ease;
+}
+nav a:hover {
+  color: #555;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 850px; /* Altezza dinamica in base allo schermo */
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.contenuto-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Usa flexbox per spingere il testo in basso */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 50px;
+}
+
+.sfondo-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1; /* Manda l'immagine dietro al testo */
+}
+
+.contenuto-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  max-width: 800px;
+}
+
+.contenuto-hero p {
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+  max-width: 800px;
+}
+
+.categorie {
+  position: relative;
+  width: 100%;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: #0d0d0d;
+  overflow: hidden;
+  height: 1050px;
+}
+
+.sfondo-categorie {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.card-categorie {
+  position: relative;
+  z-index: 2;
+  width: 20vw;
+  height: 30vw;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.immagine-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.testo-card {
+  position: relative;
+  padding: 40px 20px 20px;
+  color: #fff;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.5) 60%,
+    transparent 100%
+  );
+}
+
+.testo-card h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.testo-card p {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.banner-lo-hobbit {
+  width: 100%;
+  background-color: #000;
+}
+
+.immagine-banner {
+  width: 100%;
+  height: auto;
+}
+
+.articoli-evidenza {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px 80px;
+}
+
+.titolo-articoli {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.griglia-articoli {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
+  row-gap: 40px;
+}
+
+.card-articolo {
+  display: flex;
+  flex-direction: column;
+}
+
+.categoria.articolo {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.immagine-articolo {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.card-articolo h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #000;
+}
+
+.card-articolo p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #222;
+}
+
+footer {
+  background-color: #e5e5e5;
+  padding: 50px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-footer img {
+  width: 140px;
+  height: auto;
+}
+
+.link-footer {
+  display: flex;
+  gap: 50px;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.links a {
+  font-size: 0.8rem;
+  color: #000;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .griglia-articoli {
+    grid-template-columns: 1fr;
+  }
+  .categorie {
+    flex-wrap: wrap;
+  }
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  .link-footer {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
