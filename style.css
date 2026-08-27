@@ -86,7 +86,7 @@ nav a:hover {
 
 .contenuto-hero {
   position: relative;
-  max-width: 860px;
+  max-width: 40vw;
   z-index: 2;
 }
 
@@ -103,10 +103,53 @@ nav a:hover {
 }
 
 .contenuto-hero p {
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   color: #fff;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.hero-categorie {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  min-height: 500px;
+  display: flex;
+  align-items: flex-end;
+  padding: 80px 10%;
+  overflow: hidden;
+}
+
+.sfondo-hero-categorie {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  z-index: -1;
+}
+
+.contenuto-hero-categorie {
+  position: relative;
+  max-width: 40vw;
+  z-index: 2;
+}
+
+.contenuto-hero-categorie h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.contenuto-hero-categorie p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
 /* CARD CATEGORIE */
@@ -194,6 +237,74 @@ nav a:hover {
   color: rgba(255, 255, 255, 0.9);
 }
 
+/* CARD DETTAGLI */
+
+.lista-argomenti {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 80px 20px;
+  background-color: #f7f7f7;
+}
+
+.card-argomento {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 900px;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card-argomento:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.immagine-argomento-container {
+  width: 45%;
+  min-height: 250px;
+  overflow: hidden;
+}
+
+.immagine-argomento-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card-argomento:hover .immagine-argomento-container img {
+  transform: scale(1.05);
+}
+
+.testo-argomento {
+  width: 55%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testo-argomento h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.testo-argomento p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #444;
+}
+
 /* LO HOBBIT */
 .banner-lo-hobbit {
   width: 100%;
@@ -229,6 +340,7 @@ nav a:hover {
 }
 
 /* CARD DETTAGLIO */
+
 .articoli-evidenza {
   max-width: 1100px;
   margin: 0 auto;
@@ -374,18 +486,7 @@ footer {
 
 /* MEDIA QUERIE */
 @media (max-width: 900px) {
-  .griglia-articoli {
-    grid-template-columns: 1fr;
-  }
-  .categorie {
-    flex-wrap: wrap;
-    padding: 60px 20px;
-  }
-  .card-categorie {
-    width: 100%;
-    max-width: 400px;
-    height: 400px;
-  }
+  /* Adattamenti Header/Footer dalla Home */
   .footer-content {
     flex-direction: column;
     gap: 40px;
@@ -396,9 +497,26 @@ footer {
     justify-content: center;
     gap: 40px;
   }
-  .banner-link {
-    right: 20px;
-    bottom: 20px;
-    font-size: 0.8rem;
+
+  .hero-gioco {
+    padding: 60px 5%;
+  }
+  .contenuto-hero-gioco h1 {
+    font-size: 2.8rem;
+  }
+
+  /* Adattamenti Card Argomento */
+  .card-argomento {
+    flex-direction: column;
+    max-width: 500px;
+  }
+  .immagine-argomento-container {
+    width: 100%;
+    height: 220px;
+    min-height: auto;
+  }
+  .testo-argomento {
+    width: 100%;
+    padding: 30px 20px;
   }
 }
