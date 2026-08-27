@@ -1,6 +1,3 @@
-/* =========================================
-   Reset & Base
-   ========================================= */
 * {
   margin: 0;
   padding: 0;
@@ -27,6 +24,7 @@ a {
   color: inherit;
 }
 
+/* HEADER */
 header {
   height: 70px;
   display: flex;
@@ -37,6 +35,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .logo img {
@@ -52,34 +51,26 @@ nav ul {
 }
 
 nav a {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #000;
   transition: color 0.2s ease;
 }
+
 nav a:hover {
-  color: #555;
+  color: #da2929;
 }
 
+/*HERO*/
 .hero {
   position: relative;
   width: 100%;
-  height: 850px; /* Altezza dinamica in base allo schermo */
-  min-height: 500px;
-  overflow: hidden;
-}
-
-.contenuto-hero {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* Usa flexbox per spingere il testo in basso */
+  height: 95vh;
+  min-height: 600px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 50px;
+  align-items: flex-end; /* Allinea il contenuto in basso */
+  padding: 80px 10%;
+  overflow: hidden;
 }
 
 .sfondo-hero {
@@ -90,37 +81,46 @@ nav a:hover {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  z-index: -1; /* Manda l'immagine dietro al testo */
+  z-index: -1;
 }
 
-.contenuto-hero h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #fff;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-  max-width: 800px;
+.contenuto-hero {
+  position: relative;
+  max-width: 860px;
+  z-index: 2;
+}
+
+.hero-logo {
+  max-width: 350px;
+  margin-bottom: 20px;
+}
+
+.hero-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .contenuto-hero p {
-  font-size: 1.05rem;
-  line-height: 1.4;
+  font-size: 1.15rem;
+  line-height: 1.5;
   color: #fff;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
-  max-width: 800px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
+/* CARD CATEGORIE */
 .categorie {
   position: relative;
   width: 100%;
-  padding: 60px 20px;
+  padding: 100px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 5vw;
   background-color: #0d0d0d;
   overflow: hidden;
-  height: 1050px;
+  height: 100vh;
 }
 
 .sfondo-categorie {
@@ -130,20 +130,29 @@ nav a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0.3; /* Scurito per far risaltare le card */
   z-index: 1;
 }
 
 .card-categorie {
   position: relative;
   z-index: 2;
-  width: 20vw;
-  height: 30vw;
-  border-radius: 12px;
+  width: 16vw;
+  height: 25vw;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card-categorie:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
 }
 
 .immagine-card {
@@ -154,144 +163,242 @@ nav a:hover {
   height: 100%;
   object-fit: cover;
   z-index: -1;
+  transition: transform 0.5s ease;
+}
+
+.card-categorie:hover .immagine-card {
+  transform: scale(1.05);
 }
 
 .testo-card {
   position: relative;
-  padding: 40px 20px 20px;
+  padding: 60px 25px 40px;
   color: #fff;
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.95) 0%,
-    rgba(0, 0, 0, 0.5) 60%,
+    rgba(0, 0, 0, 0.6) 50%,
     transparent 100%
   );
 }
 
 .testo-card h3 {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .testo-card p {
-  font-size: 1.2rem;
-  line-height: 1.3;
-  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
 }
 
+/* LO HOBBIT */
 .banner-lo-hobbit {
   width: 100%;
+  height: 96.5vh;
   background-color: #000;
 }
 
-.immagine-banner {
+.banner-container {
+  position: relative;
   width: 100%;
-  height: auto;
 }
 
+.immagine-banner {
+  display: block;
+  height: 96.5vh;
+  width: 100%;
+}
+
+.banner-link {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+  color: #fff;
+  font-size: 1.3rem;
+  text-decoration: underline;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  transition: color 0.2s ease;
+  padding: 30px 0px;
+}
+
+.banner-link:hover {
+  color: #ccc;
+}
+
+/* CARD DETTAGLIO */
 .articoli-evidenza {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 60px 20px 80px;
+  padding: 80px 20px;
 }
 
 .titolo-articoli {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .griglia-articoli {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 50px;
-  row-gap: 40px;
+  column-gap: 60px;
+  row-gap: 50px;
 }
 
 .card-articolo {
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s ease;
 }
 
-.categoria.articolo {
-  font-size: 0.85rem;
-  font-style: italic;
-  color: #555;
-  margin-bottom: 8px;
-  display: block;
+.card-articolo:hover {
+  transform: translateY(-5px);
+}
+
+.immagine-articolo-container {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .immagine-articolo {
   width: 100%;
-  height: 250px;
+  height: 280px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.card-articolo:hover .immagine-articolo {
+  transform: scale(1.03);
+}
+
+.categoria-articolo {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background-color: #d73127; /* Rosso Magic */
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .card-articolo h4 {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   color: #000;
 }
 
 .card-articolo p {
-  font-size: 0.9rem;
-  line-height: 1.4;
-  color: #222;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
 }
 
+/* FOOTER */
 footer {
-  background-color: #e5e5e5;
-  padding: 50px 60px;
+  background-color: rgba(0, 0, 0, 0.1); /* Colore rosso come da mockup */
+  color: #000000;
+  padding: 60px 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Se hai un pattern per lo sfondo del footer, puoi inserirlo qui come background-image */
+}
+
+.footer-content {
+  width: 100%;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .logo-footer img {
-  width: 140px;
+  width: 160px;
   height: auto;
 }
 
 .link-footer {
   display: flex;
-  gap: 50px;
+  gap: 80px;
 }
 
 .links {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 15px;
 }
 
 .links a {
-  font-size: 0.8rem;
-  color: #000;
+  font-size: 0.9rem;
+  color: #000000;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+  font-weight: 400;
+}
+
+.links p {
+  font-size: 1rem;
+  color: #000000;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+  font-weight: 600;
 }
 
 .links a:hover {
+  opacity: 1;
   text-decoration: underline;
 }
 
+.footer-credits {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding-top: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* MEDIA QUERIE */
 @media (max-width: 900px) {
   .griglia-articoli {
     grid-template-columns: 1fr;
   }
   .categorie {
     flex-wrap: wrap;
+    padding: 60px 20px;
   }
-  footer {
+  .card-categorie {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+  }
+  .footer-content {
     flex-direction: column;
-    align-items: flex-start;
     gap: 40px;
+    text-align: center;
   }
   .link-footer {
     flex-wrap: wrap;
-    gap: 30px;
+    justify-content: center;
+    gap: 40px;
+  }
+  .banner-link {
+    right: 20px;
+    bottom: 20px;
+    font-size: 0.8rem;
   }
 }

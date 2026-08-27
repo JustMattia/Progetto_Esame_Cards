@@ -9,7 +9,10 @@
   <body>
     <header>
       <div class="logo">
-        <img src="/IMG/logo.png" alt="Magic: The Gathering" width="150" />
+        <!-- Inserisci il logo corretto -->
+        <a href="#"
+          ><img src="/IMG/Logo Head.png" alt="Magic: The Gathering" width="150"
+        /></a>
       </div>
       <nav>
         <ul>
@@ -19,21 +22,30 @@
         </ul>
       </nav>
     </header>
+
     <section class="hero">
+      <img src="/IMG/Sfondo Hero.png" alt="" class="sfondo-hero" />
       <div class="contenuto-hero">
-        <img src="/IMG/Sfondo Hero.png" alt="" class="sfondo-hero" />
-        <h1>Magic: The Gathering</h1>
+        <img
+          src="/IMG/Logo Hero.png"
+          alt="Magic: The Gathering"
+          class="hero-logo"
+        />
+        <hr class="hero-divider" />
         <p>
-          Più di un semplice gioco di carte; un universo in continua espansione.
+          Più di un semplice gioco di carte: un universo in continua espansione.
           Colleziona carte uniche, crea le tue strategie e sfida giocatori da
           tutto il mondo. Scopri le regole del gioco, esplora le nuove
           espansioni e trova il formato perfetto per te.
         </p>
       </div>
     </section>
+
     <section class="categorie">
       <img src="/IMG/Sfondo Categorie.png" alt="" class="sfondo-categorie" />
-      <div class="card-categorie card-gioco">
+
+      <!-- Card trasformate in link (tag <a>) -->
+      <a href="#" class="card-categorie card-gioco">
         <img src="/IMG/Card Il Gioco.png" alt="" class="immagine-card" />
         <div class="testo-card">
           <h3>Il Gioco</h3>
@@ -42,122 +54,139 @@
             Regole.
           </p>
         </div>
-      </div>
-      <div class="card-categorie card-espansioni">
+      </a>
+
+      <a href="#" class="card-categorie card-espansioni">
         <img src="/IMG/Card Le Espansioni.png" alt="" class="immagine-card" />
         <div class="testo-card">
           <h3>Le Espansioni</h3>
           <p>Non perderti le ultime uscite, dagli esclusivi Secret Lair.</p>
         </div>
-      </div>
+      </a>
 
-      <div class="card-categorie card-formati">
+      <a href="#" class="card-categorie card-formati">
         <img src="/IMG/Card I Formati.png" alt="" class="immagine-card" />
         <div class="testo-card">
           <h3>I Formati</h3>
           <p>Costruisci il tuo mazzo e divertiti, dal Vintage al Commander.</p>
         </div>
+      </a>
+    </section>
+
+    <section class="banner-lo-hobbit">
+      <div class="banner-container">
+        <img
+          src="/IMG/Lo Hobbit.png"
+          alt="Magic The Gathering x Lo Hobbit"
+          class="immagine-banner"
+        />
+        <a href="#" class="banner-link"
+          >Esplora le migliori carte di questa nuovissima espansione &rarr;</a
+        >
       </div>
     </section>
-    <section class="banner-lo-hobbit">
-      <img
-        src="/IMG/Lo Hobbit.png"
-        alt="Magic The Gathering x Lo Hobbit"
-        class="immagine-banner"
-      />
-    </section>
+
     <section class="articoli-evidenza">
       <h2 class="titolo-articoli">Leggi anche &darr;</h2>
 
       <div class="griglia-articoli">
-        <article class="card-articolo">
-          <span class="categoria articolo">Formati</span>
-          <img
-            src="/IMG/Pauper.png"
-            alt="Battaglia Pauper"
-            class="immagine-articolo"
-          />
+        <!-- Card articolo trasformate in link -->
+        <a href="#" class="card-articolo">
+          <div class="immagine-articolo-container">
+            <img
+              src="/IMG/Pauper.png"
+              alt="Battaglia Pauper"
+              class="immagine-articolo"
+            />
+            <span class="categoria-articolo">Formati</span>
+          </div>
           <h4>Pauper</h4>
           <p>
             Pura abilità di deckbuilding al minimo costo. Metti alla prova le
             tue doti strategiche in un formato di sole carte comuni!
           </p>
-        </article>
-        <article class="card-articolo">
-          <span class="categoria articolo">Gioco</span>
-          <img
-            src="/IMG/L'unico Anello.png"
-            alt="La carta dell'Unico Anello"
-            class="immagine-articolo"
-          />
+        </a>
+
+        <a href="#" class="card-articolo">
+          <div class="immagine-articolo-container">
+            <img
+              src="/IMG/L'unico Anello.png"
+              alt="La carta dell'Unico Anello"
+              class="immagine-articolo"
+            />
+            <span class="categoria-articolo">Gioco</span>
+          </div>
           <h4>L'Unico Anello</h4>
           <p>
             Carta unica al mondo, gradata PSA 9 e pagata circa 2 Mln di
             Dollari... Ecco chi la possiede.
           </p>
-        </article>
-        <article class="card-articolo">
-          <span class="categoria articolo">Espansioni</span>
-          <img
-            src="/IMG/Hatsune Miku.png"
-            alt="Carte di Hatsune Miku"
-            class="immagine-articolo"
-          />
+        </a>
+
+        <a href="#" class="card-articolo">
+          <div class="immagine-articolo-container">
+            <img
+              src="/IMG/Hatsune Miku.png"
+              alt="Carte di Hatsune Miku"
+              class="immagine-articolo"
+            />
+            <span class="categoria-articolo">Espansioni</span>
+          </div>
           <h4>Hatsune Miku</h4>
           <p>
             Ormai è virale, se ne parla dappertutto, le hanno persino dedicato
             un mazzo... Scopri il commander deck Secret Lair di Hatsune Miku!
           </p>
-        </article>
-        <article class="card-articolo">
-          <span class="categoria articolo">Formati</span>
-          <img
-            src="/IMG/Commander.png"
-            alt="Artwork Commander"
-            class="immagine-articolo"
-          />
+        </a>
+
+        <a href="#" class="card-articolo">
+          <div class="immagine-articolo-container">
+            <img
+              src="/IMG/Commander.png"
+              alt="Artwork Commander"
+              class="immagine-articolo"
+            />
+            <span class="categoria-articolo">Formati</span>
+          </div>
           <h4>Commander</h4>
           <p>
             Il formato multiplayer per eccellenza. Scegli un leader leggendario
             e guida un mazzo irripetibile da 100 carte in caotiche battaglie tra
             amici.
           </p>
-        </article>
+        </a>
       </div>
     </section>
-    <footer>
-      <div class="logo-footer">
-        <img src="/IMG/logo.png" alt="Magic: The Gathering" width="120" />
-      </div>
 
-      <div class="link-footer">
-        <ul class="links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Chi Siamo</a></li>
-        </ul>
-        <ul class="links">
-          <li><a href="#">Il Gioco</a></li>
-          <li><a href="#">Le Espansioni</a></li>
-          <li><a href="#">I Formati</a></li>
-        </ul>
-        <ul class="links">
-          <li><a href="#">La Storia</a></li>
-          <li><a href="#">Secret Lair</a></li>
-          <li><a href="#">Standard</a></li>
-        </ul>
-        <ul class="links">
-          <li><a href="#">Le Carte</a></li>
-          <li><a href="#">Avatar</a></li>
-          <li><a href="#">Modern</a></li>
-        </ul>
-        <ul class="links">
-          <li><a href="#">Carte Famose</a></li>
-          <li><a href="#">Marvel</a></li>
-          <li><a href="#">Pauper</a></li>
-          <li><a href="#">Pro Players</a></li>
-          <li><a href="#">Lo Hobbit</a></li>
-          <li><a href="#">Commander</a></li>
-        </ul>
+    <footer>
+      <div class="footer-content">
+        <div class="logo-footer">
+          <img
+            src="/IMG/Logo Footer.png"
+            alt="Magic: The Gathering"
+            width="160"
+          />
+        </div>
+
+        <div class="link-footer">
+          <ul class="links">
+            <p>SITO</p>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Chi Siamo</a></li>
+          </ul>
+          <ul class="links">
+            <p>CATEGORIE</p>
+            <li><a href="#">Il Gioco</a></li>
+            <li><a href="#">Le Espansioni</a></li>
+            <li><a href="#">I Formati</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-credits">
+        <p>
+          Progetto d'esame Web Design - Diego Meli, Mattia Santo Moltisanti,
+          Laura Benfante
+        </p>
       </div>
     </footer>
   </body>
