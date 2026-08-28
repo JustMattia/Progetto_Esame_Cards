@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <link rel="icon" type="icon" href="IMG/Icon.ico" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <div class="logo">
-        <!-- Inserisci il logo corretto -->
         <a href="index.html"
           ><img src="IMG/Logo Head.png" alt="Magic: The Gathering" width="150"
         /></a>
@@ -19,6 +19,7 @@
           <li><a href="Categorie/Gioco.html">Gioco</a></li>
           <li><a href="Categorie/Espansioni.html">Espansioni</a></li>
           <li><a href="Categorie/Formati.html">Formati</a></li>
+          <li><a href="Categorie/Chi Siamo.html">Chi Siamo</a></li>
         </ul>
       </nav>
     </header>
@@ -45,7 +46,7 @@
       <img src="IMG/Sfondo Categorie.png" alt="" class="sfondo-categorie" />
 
       <!-- Card trasformate in link (tag <a>) -->
-      <a href="#" class="card-categorie card-gioco">
+      <a href="Categorie/Gioco.html" class="card-categorie card-gioco">
         <img src="IMG/Card Il Gioco.png" alt="" class="immagine-card" />
         <div class="testo-card">
           <h3>Il Gioco</h3>
@@ -56,7 +57,10 @@
         </div>
       </a>
 
-      <a href="#" class="card-categorie card-espansioni">
+      <a
+        href="Categorie/Espansioni.html"
+        class="card-categorie card-espansioni"
+      >
         <img src="IMG/Card Le Espansioni.png" alt="" class="immagine-card" />
         <div class="testo-card">
           <h3>Le Espansioni</h3>
@@ -64,7 +68,7 @@
         </div>
       </a>
 
-      <a href="#" class="card-categorie card-formati">
+      <a href="Categorie/Formati.html" class="card-categorie card-formati">
         <img src="IMG/Card I Formati.png" alt="" class="immagine-card" />
         <div class="testo-card">
           <h3>I Formati</h3>
@@ -80,7 +84,7 @@
           alt="Magic The Gathering x Lo Hobbit"
           class="immagine-banner"
         />
-        <a href="#" class="banner-link"
+        <a href="Articoli/Lo Hobbit.html" class="banner-link"
           >Esplora le migliori carte di questa nuovissima espansione &rarr;</a
         >
       </div>
@@ -90,8 +94,7 @@
       <h2 class="titolo-articoli">Leggi anche &darr;</h2>
 
       <div class="griglia-articoli">
-        <!-- Card articolo trasformate in link -->
-        <a href="#" class="card-articolo">
+        <a href="Articoli/Pauper.html" class="card-articolo">
           <div class="immagine-articolo-container">
             <img
               src="IMG/Pauper.png"
@@ -107,7 +110,7 @@
           </p>
         </a>
 
-        <a href="#" class="card-articolo">
+        <a href="Articoli/Carte Famose.html" class="card-articolo">
           <div class="immagine-articolo-container">
             <img
               src="IMG/L'unico Anello.png"
@@ -123,23 +126,23 @@
           </p>
         </a>
 
-        <a href="#" class="card-articolo">
+        <a href="Articoli/Dandan.html" class="card-articolo">
           <div class="immagine-articolo-container">
             <img
-              src="IMG/Hatsune Miku.png"
-              alt="Carte di Hatsune Miku"
+              src="IMG/Dandan.jpg"
+              alt="Carte di Dandan"
               class="immagine-articolo"
             />
             <span class="categoria-articolo">Espansioni</span>
           </div>
-          <h4>Hatsune Miku</h4>
+          <h4>Dandan</h4>
           <p>
-            Ormai è virale, se ne parla dappertutto, le hanno persino dedicato
-            un mazzo... Scopri il commander deck Secret Lair di Hatsune Miku!
+            Il leggendario pesce blu che ha dato il via a un formato amatissimo
+            dalla community è tornato!
           </p>
         </a>
 
-        <a href="#" class="card-articolo">
+        <a href="Articoli/Commander.html" class="card-articolo">
           <div class="immagine-articolo-container">
             <img
               src="IMG/Commander.png"
@@ -161,11 +164,13 @@
     <footer>
       <div class="footer-content">
         <div class="logo-footer">
-          <img
-            src="IMG/Logo Footer.png"
-            alt="Magic: The Gathering"
-            width="160"
-          />
+          <a href="/index.html">
+            <img
+              src="/IMG/Logo Footer.png"
+              alt="Magic: The Gathering"
+              width="160"
+            />
+          </a>
         </div>
 
         <div class="link-footer">
