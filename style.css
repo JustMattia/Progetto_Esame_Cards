@@ -552,6 +552,167 @@ footer {
   opacity: 0.7;
 }
 
+/* Articoli */
+.hero-articolo {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  min-height: 400px;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px 10%;
+  overflow: hidden;
+}
+
+.sfondo-hero-articolo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+.hero-articolo-content {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #fff;
+  z-index: 2;
+}
+
+.hero-articolo-content h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.9);
+}
+
+.dettagli-gioco {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  color: #ce3021;
+}
+
+.dettaglio-item {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.dettaglio-item img {
+  width: 60px;
+  height: auto;
+}
+
+.contenuto-articolo {
+  width: 100%;
+  max-width: 850px;
+  margin: 60px auto 50px;
+  padding: 0 20px;
+  font-size: 1.15rem;
+  line-height: 2.4;
+  color: #222;
+}
+
+.contenuto-articolo h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.contenuto-articolo p {
+  margin-bottom: 25px;
+  line-height: 2;
+}
+
+.contenuto-articolo ul {
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.contenuto-articolo li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.contenuto-articolo img {
+  width: 100%;
+
+  margin-top: 50px;
+  margin-bottom: 30px;
+  border-radius: 6px;
+}
+
+.foto-stretta {
+  height: 200px;
+  object-fit: cover;
+  object-position: 90% 10%;
+}
+
+/* LEGGI ANCHE */
+
+.sezione-leggi-anche {
+  max-width: 850px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.titolo-leggi-anche {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #000;
+}
+
+.griglia-leggi-anche {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card-leggi-anche {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.card-leggi-anche:hover {
+  transform: translateY(-5px);
+}
+
+.card-leggi-anche img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card-leggi-anche h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.card-leggi-anche p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #333;
+}
+
 /* MEDIA QUERIE */
 @media (max-width: 900px) {
   /* Adattamenti Header/Footer dalla Home */
