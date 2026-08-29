@@ -1,3 +1,8 @@
+:root {
+  --rosso: #ce3021;
+  --grigio: #f7f7f7;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +29,6 @@ a {
   color: inherit;
 }
 
-/* HEADER */
 header {
   height: 70px;
   display: flex;
@@ -58,36 +62,89 @@ nav a {
 }
 
 nav a:hover {
-  color: #da2929;
+  color: var(--rosso);
 }
 
-/*HERO*/
-.hero {
+.hero,
+.hero-categorie,
+.hero-articolo {
   position: relative;
   width: 100%;
-  height: 95vh;
-  min-height: 600px;
   display: flex;
-  align-items: flex-end; /* Allinea il contenuto in basso */
+  align-items: flex-end;
   padding: 80px 10%;
   overflow: hidden;
 }
 
-.sfondo-hero {
+.hero {
+  height: 95vh;
+  min-height: 600px;
+}
+
+.hero-categorie {
+  height: 95vh;
+  min-height: 500px;
+}
+
+.hero-articolo {
+  height: 40vh;
+  min-height: 400px;
+  padding: 40px 10%;
+}
+
+.sfondo-hero,
+.sfondo-hero-categorie,
+.sfondo-hero-articolo,
+.sfondo-categorie,
+.immagine-card {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
   z-index: -1;
 }
 
-.contenuto-hero {
+.sfondo-hero,
+.sfondo-hero-articolo {
+  object-position: center;
+}
+
+.sfondo-hero-categorie {
+  object-position: top center;
+}
+
+.sfondo-categorie {
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.immagine-card {
+  transition: transform 0.5s ease;
+}
+
+.contenuto-hero,
+.contenuto-hero-categorie {
   position: relative;
   max-width: 40vw;
   z-index: 2;
+}
+
+.contenuto-hero p,
+.contenuto-hero-categorie p {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.contenuto-hero p {
+  line-height: 1.5;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.contenuto-hero-categorie p {
+  line-height: 1.6;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
 .hero-logo {
@@ -102,41 +159,6 @@ nav a:hover {
   width: 100%;
 }
 
-.contenuto-hero p {
-  font-size: 1.5rem;
-  line-height: 1.5;
-  color: #fff;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
-}
-
-.hero-categorie {
-  position: relative;
-  width: 100%;
-  height: 95vh;
-  min-height: 500px;
-  display: flex;
-  align-items: flex-end;
-  padding: 80px 10%;
-  overflow: hidden;
-}
-
-.sfondo-hero-categorie {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  z-index: -1;
-}
-
-.contenuto-hero-categorie {
-  position: relative;
-  max-width: 40vw;
-  z-index: 2;
-}
-
 .contenuto-hero-categorie h1 {
   font-size: 3.5rem;
   font-weight: 700;
@@ -145,17 +167,10 @@ nav a:hover {
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
-.contenuto-hero-categorie p {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  color: #fff;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
-}
-
-/* CARD CATEGORIE */
 .categorie {
   position: relative;
   width: 100%;
+  height: 100vh;
   padding: 100px 20px;
   display: flex;
   justify-content: center;
@@ -163,18 +178,6 @@ nav a:hover {
   gap: 5vw;
   background-color: #0d0d0d;
   overflow: hidden;
-  height: 100vh;
-}
-
-.sfondo-categorie {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.3; /* Scurito per far risaltare le card */
-  z-index: 1;
 }
 
 .card-categorie {
@@ -196,17 +199,6 @@ nav a:hover {
 .card-categorie:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
-}
-
-.immagine-card {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  transition: transform 0.5s ease;
 }
 
 .card-categorie:hover .immagine-card {
@@ -237,15 +229,13 @@ nav a:hover {
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* CARD DETTAGLI */
-
 .lista-argomenti {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
   padding: 80px 20px;
-  background-color: #f7f7f7;
+  background-color: var(--grigio);
 }
 
 .card-argomento {
@@ -305,7 +295,14 @@ nav a:hover {
   color: #444;
 }
 
-/* LO HOBBIT */
+.testo-argomento h5 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--rosso);
+  margin-top: 50px;
+  text-transform: uppercase;
+}
+
 .banner-lo-hobbit {
   width: 100%;
   height: 96.5vh;
@@ -332,14 +329,12 @@ nav a:hover {
   text-decoration: underline;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
   transition: color 0.2s ease;
-  padding: 30px 0px;
+  padding: 30px 0;
 }
 
 .banner-link:hover {
   color: #ccc;
 }
-
-/* CARD DETTAGLIO */
 
 .articoli-evidenza {
   max-width: 1100px;
@@ -361,13 +356,15 @@ nav a:hover {
   row-gap: 50px;
 }
 
-.card-articolo {
+.card-articolo,
+.card-leggi-anche {
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease;
 }
 
-.card-articolo:hover {
+.card-articolo:hover,
+.card-leggi-anche:hover {
   transform: translateY(-5px);
 }
 
@@ -394,7 +391,7 @@ nav a:hover {
   position: absolute;
   bottom: 12px;
   left: 12px;
-  background-color: #ce3021;
+  background-color: var(--rosso);
   color: #fff;
   font-size: 0.75rem;
   font-weight: 600;
@@ -416,17 +413,6 @@ nav a:hover {
   line-height: 1.5;
   color: #333;
 }
-
-.testo-argomento h5 {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #ce3021;
-  margin-top: 50px;
-  position: static;
-  text-transform: uppercase;
-}
-
-/* TIMELINE ESPANSIONI */
 
 .timeline-wrapper {
   position: relative;
@@ -473,6 +459,7 @@ nav a:hover {
 .lista-argomenti .timeline-wrapper:first-child .timeline-line {
   top: 50%;
 }
+
 .lista-argomenti .timeline-wrapper:last-child .timeline-line {
   bottom: 50%;
 }
@@ -480,16 +467,15 @@ nav a:hover {
 .timeline-dot {
   width: 12px;
   height: 12px;
-  background-color: #ce3021;
+  background-color: var(--rosso);
   border-radius: 50%;
   z-index: 2;
-  box-shadow: 0 0 0 4px #f7f7f7;
+  box-shadow: 0 0 0 4px var(--grigio);
 }
 
-/* FOOTER */
 footer {
   background-color: rgba(0, 0, 0, 0.1);
-  color: #000000;
+  color: #000;
   padding: 60px 10%;
   display: flex;
   flex-direction: column;
@@ -522,19 +508,21 @@ footer {
   gap: 15px;
 }
 
+.links a,
+.links p {
+  color: #000;
+  transition: opacity 0.2s ease;
+}
+
 .links a {
   font-size: 0.9rem;
-  color: #000000;
   opacity: 0.9;
-  transition: opacity 0.2s ease;
   font-weight: 400;
 }
 
 .links p {
   font-size: 1rem;
-  color: #000000;
   opacity: 1;
-  transition: opacity 0.2s ease;
   font-weight: 600;
 }
 
@@ -550,29 +538,6 @@ footer {
   text-align: center;
   font-size: 0.75rem;
   opacity: 0.7;
-}
-
-/* Articoli */
-.hero-articolo {
-  position: relative;
-  width: 100%;
-  height: 40vh;
-  min-height: 400px;
-  display: flex;
-  align-items: flex-end;
-  padding: 40px 10%;
-  overflow: hidden;
-}
-
-.sfondo-hero-articolo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: -1;
 }
 
 .hero-articolo-content {
@@ -595,9 +560,9 @@ footer {
 .dettagli-gioco {
   display: flex;
   justify-content: center;
-  gap: 30px;
   align-items: center;
-  color: #ce3021;
+  gap: 30px;
+  color: var(--rosso);
 }
 
 .dettaglio-item {
@@ -626,8 +591,7 @@ footer {
   font-size: 1.8rem;
   font-weight: 700;
   color: #000;
-  margin-top: 50px;
-  margin-bottom: 20px;
+  margin: 50px 0 20px;
 }
 
 .contenuto-articolo p {
@@ -647,9 +611,7 @@ footer {
 
 .contenuto-articolo img {
   width: 100%;
-
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin: 50px 0 30px;
   border-radius: 6px;
 }
 
@@ -658,8 +620,6 @@ footer {
   object-fit: cover;
   object-position: 90% 10%;
 }
-
-/* LEGGI ANCHE */
 
 .sezione-leggi-anche {
   max-width: 850px;
@@ -682,14 +642,7 @@ footer {
 }
 
 .card-leggi-anche {
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease;
   cursor: pointer;
-}
-
-.card-leggi-anche:hover {
-  transform: translateY(-5px);
 }
 
 .card-leggi-anche img {
@@ -713,37 +666,30 @@ footer {
   color: #333;
 }
 
-/* MEDIA QUERIE */
 @media (max-width: 900px) {
-  /* Adattamenti Header/Footer dalla Home */
   .footer-content {
     flex-direction: column;
     gap: 40px;
     text-align: center;
   }
+
   .link-footer {
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
   }
 
-  .hero-gioco {
-    padding: 60px 5%;
-  }
-  .contenuto-hero-gioco h1 {
-    font-size: 2.8rem;
-  }
-
-  /* Adattamenti Card Argomento */
   .card-argomento {
     flex-direction: column;
     max-width: 500px;
   }
+
   .immagine-argomento-container {
     width: 100%;
     height: 220px;
     min-height: auto;
   }
+
   .testo-argomento {
     width: 100%;
     padding: 30px 20px;
