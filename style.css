@@ -615,28 +615,10 @@ footer {
   border-radius: 6px;
 }
 
-.img-panoramica {
-  height: 280px;
+.foto-stretta {
+  height: 200px;
   object-fit: cover;
-  object-position: center;
-}
-
-.img-carta {
-  width: auto;
-  max-width: 280px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  object-fit: contain;
-}
-
-.img-carte-gruppo {
-  width: auto;
-  max-width: 550px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  object-fit: contain;
+  object-position: 90% 10%;
 }
 
 .sezione-leggi-anche {
