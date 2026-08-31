@@ -48,6 +48,14 @@ header {
   object-fit: contain;
 }
 
+.menu-toggle {
+  display: none;
+}
+
+.burger-btn {
+  display: none;
+}
+
 nav ul {
   display: flex;
   list-style: none;
@@ -676,11 +684,732 @@ footer {
   color: #333;
 }
 
-@media (max-width: 900px) {
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. TABLET (max-width: 1024px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1024px) {
+  header {
+    padding: 0 30px;
+    height: 70px;
+  }
+
+  nav ul {
+    gap: 20px;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 550px;
+    padding: 70px 6%;
+  }
+
+  .contenuto-hero {
+    max-width: 70vw;
+  }
+
+  .contenuto-hero p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+
+  .hero-logo {
+    max-width: 300px;
+    margin-bottom: 16px;
+  }
+
+  .hero-categorie {
+    height: auto;
+    min-height: 480px;
+    padding: 60px 6%;
+  }
+
+  .contenuto-hero-categorie {
+    max-width: 75vw;
+  }
+
+  .contenuto-hero-categorie h1 {
+    font-size: 2.8rem;
+    margin-bottom: 16px;
+  }
+
+  .contenuto-hero-categorie p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .hero-articolo {
+    height: auto;
+    min-height: 320px;
+    padding: 40px 6%;
+  }
+
+  .hero-articolo-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .categorie {
+    height: auto;
+    padding: 70px 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .card-categorie {
+    width: 220px;
+    height: 340px;
+  }
+
+  .testo-card {
+    padding: 40px 18px 25px;
+  }
+
+  .testo-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .testo-card p {
+    font-size: 1.05rem;
+  }
+
+  .banner-lo-hobbit,
+  .immagine-banner {
+    height: 450px;
+  }
+
+  .immagine-banner {
+    object-fit: cover;
+  }
+
+  .banner-link {
+    font-size: 1.15rem;
+    bottom: 25px;
+    right: 30px;
+  }
+
+  .articoli-evidenza {
+    padding: 60px 25px;
+  }
+
+  .griglia-articoli {
+    column-gap: 35px;
+    row-gap: 40px;
+  }
+
+  .immagine-articolo {
+    height: 230px;
+  }
+
+  .lista-argomenti {
+    padding: 60px 25px;
+  }
+
+  .card-argomento {
+    max-width: 800px;
+  }
+
+  .timeline-wrapper {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .timeline-side {
+    position: static;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    padding-right: 0;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .timeline-year {
+    font-size: 1.8rem;
+    margin-right: 0;
+  }
+
+  .timeline-separator {
+    display: none;
+  }
+
+  .contenuto-articolo {
+    padding: 0 25px;
+    margin: 45px auto 40px;
+    font-size: 1.05rem;
+    line-height: 2.1;
+  }
+
+  .contenuto-articolo h2 {
+    font-size: 1.6rem;
+    margin: 40px 0 10px;
+  }
+
+  .dettagli-gioco {
+    gap: 25px;
+    font-size: 1.3rem;
+  }
+
+  .dettaglio-item img {
+    width: 50px;
+  }
+
+  .sezione-leggi-anche {
+    padding: 0 25px;
+    margin: 60px auto;
+  }
+
+  .griglia-leggi-anche {
+    gap: 20px;
+  }
+
+  .card-leggi-anche img {
+    height: 130px;
+  }
+
+  .card-leggi-anche h3 {
+    font-size: 1.1rem;
+  }
+
+  .card-leggi-anche p {
+    font-size: 0.8rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. LANDSCAPE (Mobile & Tablet orizzontale: max-height 600px)
+   -------------------------------------------------------------------------- */
+@media screen and (orientation: landscape) and (max-height: 600px) {
+  header {
+    height: 54px;
+    padding: 0 25px;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+
+  nav ul {
+    gap: 18px;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 50px 5% 35px;
+  }
+
+  .contenuto-hero {
+    max-width: 80vw;
+  }
+
+  .hero-logo {
+    max-width: 220px;
+    margin-bottom: 10px;
+  }
+
+  .contenuto-hero p {
+    font-size: 1.05rem;
+    line-height: 1.45;
+  }
+
+  .hero-categorie {
+    height: auto;
+    min-height: 100vh;
+    padding: 45px 5% 30px;
+  }
+
+  .contenuto-hero-categorie {
+    max-width: 85vw;
+  }
+
+  .contenuto-hero-categorie h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+
+  .contenuto-hero-categorie p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .hero-articolo {
+    height: auto;
+    min-height: 220px;
+    padding: 30px 5% 20px;
+  }
+
+  .hero-articolo-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .categorie {
+    height: auto;
+    padding: 45px 20px;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card-categorie {
+    width: 190px;
+    height: 270px;
+  }
+
+  .testo-card {
+    padding: 30px 14px 20px;
+  }
+
+  .testo-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .testo-card p {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+
+  .banner-lo-hobbit,
+  .immagine-banner {
+    height: 280px;
+  }
+
+  .banner-link {
+    font-size: 0.95rem;
+    bottom: 15px;
+    right: 25px;
+    padding: 10px 0;
+  }
+
+  .articoli-evidenza {
+    padding: 40px 20px;
+  }
+
+  .griglia-articoli {
+    column-gap: 25px;
+    row-gap: 25px;
+  }
+
+  .immagine-articolo {
+    height: 170px;
+  }
+
+  .contenuto-articolo {
+    margin: 35px auto 30px;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .contenuto-articolo h2 {
+    font-size: 1.4rem;
+    margin: 30px 0 8px;
+  }
+
+  .contenuto-articolo .img-carta-singola,
+  .img-carta-singola {
+    max-width: 250px;
+    margin: 25px auto;
+  }
+
+  footer {
+    padding: 40px 5%;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. SMARTPHONE (max-width: 768px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  /* Header con Hamburger Menu */
+  header {
+    height: 65px;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .logo img {
+    height: 32px;
+  }
+
+  /* Hamburger Icon */
+  .burger-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 28px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1002;
+    padding: 0;
+  }
+
+  .burger-btn span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  /* Trasformazione in X quando il menu è aperto */
+  .menu-toggle:checked ~ .burger-btn span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+    background-color: var(--rosso);
+  }
+
+  .menu-toggle:checked ~ .burger-btn span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle:checked ~ .burger-btn span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+    background-color: var(--rosso);
+  }
+
+  /* Pannello Menu a tendina */
+  nav {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-in-out;
+    z-index: 999;
+    padding: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    padding: 16px 20px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  nav ul li:last-child a {
+    border-bottom: none;
+  }
+
+  .menu-toggle:checked ~ nav {
+    max-height: 240px;
+    padding: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  /* Hero Home */
+  .hero {
+    height: auto;
+    min-height: 480px;
+    padding: 60px 20px 40px;
+    align-items: flex-end;
+  }
+
+  .contenuto-hero {
+    max-width: 100%;
+  }
+
+  .hero-logo {
+    max-width: 240px;
+    margin-bottom: 15px;
+  }
+
+  .contenuto-hero p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+
+  /* Hero Categorie */
+  .hero-categorie {
+    height: auto;
+    min-height: 400px;
+    padding: 50px 20px 30px;
+    align-items: flex-end;
+  }
+
+  .contenuto-hero-categorie {
+    max-width: 100%;
+  }
+
+  .contenuto-hero-categorie h1 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+  }
+
+  .contenuto-hero-categorie p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Hero Articoli */
+  .hero-articolo {
+    height: auto;
+    min-height: 250px;
+    padding: 40px 20px 25px;
+  }
+
+  .hero-articolo-content h1 {
+    font-size: 2.3rem;
+  }
+
+  /* Card Categorie Home in Colonna (una sotto l'altra) */
+  .categorie {
+    height: auto;
+    padding: 50px 20px;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .card-categorie {
+    width: 100%;
+    max-width: 340px;
+    height: 350px;
+  }
+
+  .testo-card {
+    padding: 50px 20px 30px;
+  }
+
+  .testo-card h3 {
+    font-size: 1.7rem;
+  }
+
+  .testo-card p {
+    font-size: 1.1rem;
+  }
+
+  /* Banner Lo Hobbit */
+  .banner-lo-hobbit,
+  .immagine-banner {
+    height: 320px;
+  }
+
+  .immagine-banner {
+    object-fit: cover;
+  }
+
+  .banner-link {
+    font-size: 0.95rem;
+    bottom: 15px;
+    right: 15px;
+    left: 15px;
+    text-align: right;
+    padding: 10px 0;
+  }
+
+  /* Articoli in evidenza Home in Colonna */
+  .articoli-evidenza {
+    padding: 45px 15px;
+  }
+
+  .titolo-articoli {
+    font-size: 1.6rem;
+    margin-bottom: 35px;
+  }
+
+  .griglia-articoli {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .immagine-articolo {
+    height: 220px;
+  }
+
+  /* Card Argomenti Categorie in Colonna (Verticale) */
+  .lista-argomenti {
+    padding: 40px 15px;
+    gap: 30px;
+  }
+
+  .card-argomento {
+    flex-direction: column;
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .immagine-argomento-container {
+    width: 100%;
+    height: 210px;
+    min-height: auto;
+  }
+
+  .testo-argomento {
+    width: 100%;
+    padding: 25px 20px;
+  }
+
+  .testo-argomento h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .testo-argomento p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .testo-argomento h5 {
+    margin-top: 20px;
+    font-size: 0.75rem;
+  }
+
+  /* Timeline Espansioni su Mobile */
+  .timeline-wrapper {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .timeline-side {
+    position: static;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    padding-right: 0;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .timeline-year {
+    font-size: 1.5rem;
+    margin-right: 0;
+  }
+
+  .timeline-separator {
+    display: none;
+  }
+
+  /* Contenuto Articolo & Chi siamo */
+  .contenuto-articolo {
+    padding: 0 15px;
+    margin: 30px auto 25px;
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .contenuto-articolo h2 {
+    font-size: 1.4rem;
+    margin: 32px 0 10px;
+  }
+
+  .contenuto-articolo p {
+    margin-bottom: 18px;
+    line-height: 1.7;
+  }
+
+  .contenuto-articolo ul {
+    padding-left: 18px;
+    margin-bottom: 20px;
+  }
+
+  .contenuto-articolo li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  .contenuto-articolo img {
+    margin: 30px 0 20px;
+    border-radius: 6px;
+  }
+
+  .contenuto-articolo .img-carta-singola,
+  .img-carta-singola {
+    max-width: 270px;
+    margin: 30px auto 25px;
+  }
+
+  /* Dettagli Gioco (Icone formati) */
+  .dettagli-gioco {
+    gap: 15px;
+    font-size: 1.1rem;
+    flex-wrap: wrap;
+  }
+
+  .dettaglio-item img {
+    width: 44px;
+  }
+
+  /* Sezione Leggi anche in Colonna (una sotto l'altra) */
+  .sezione-leggi-anche {
+    padding: 0 15px;
+    margin: 50px auto 30px;
+  }
+
+  .titolo-leggi-anche {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+
+  .griglia-leggi-anche {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .card-leggi-anche img {
+    height: 190px;
+  }
+
+  .card-leggi-anche h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-leggi-anche p {
+    font-size: 0.9rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 45px 20px;
+  }
+
   .footer-content {
     flex-direction: column;
-    gap: 40px;
+    gap: 35px;
     text-align: center;
+    margin-bottom: 30px;
   }
 
   .link-footer {
@@ -688,20 +1417,123 @@ footer {
     justify-content: center;
     gap: 40px;
   }
+}
 
-  .card-argomento {
-    flex-direction: column;
-    max-width: 500px;
+/* --------------------------------------------------------------------------
+   4. SMARTPHONE PICCOLI (max-width: 480px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+  header {
+    padding: 0 15px;
   }
 
-  .immagine-argomento-container {
-    width: 100%;
-    height: 220px;
-    min-height: auto;
+  .logo img {
+    height: 28px;
   }
 
-  .testo-argomento {
+  .hero {
+    min-height: 420px;
+    padding: 40px 15px 30px;
+  }
+
+  .hero-logo {
+    max-width: 190px;
+  }
+
+  .contenuto-hero p {
+    font-size: 0.95rem;
+  }
+
+  .hero-categorie {
+    min-height: 350px;
+    padding: 40px 15px 25px;
+  }
+
+  .contenuto-hero-categorie h1 {
+    font-size: 1.8rem;
+  }
+
+  .contenuto-hero-categorie p {
+    font-size: 0.9rem;
+  }
+
+  .hero-articolo {
+    min-height: 200px;
+    padding: 30px 15px 20px;
+  }
+
+  .hero-articolo-content h1 {
+    font-size: 1.9rem;
+  }
+
+  .card-categorie {
+    height: 320px;
+  }
+
+  .testo-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .testo-card p {
+    font-size: 0.95rem;
+  }
+
+  .banner-lo-hobbit,
+  .immagine-banner {
+    height: 260px;
+  }
+
+  .banner-link {
+    font-size: 0.85rem;
+  }
+
+  .contenuto-articolo {
+    font-size: 0.9rem;
+  }
+
+  .contenuto-articolo h2 {
+    font-size: 1.25rem;
+  }
+
+  .contenuto-articolo .img-carta-singola,
+  .img-carta-singola {
+    max-width: 230px;
+  }
+
+  .dettagli-gioco {
+    gap: 10px;
+    font-size: 0.95rem;
+  }
+
+  .dettaglio-item img {
+    width: 36px;
+  }
+
+  footer {
+    padding: 35px 15px;
+  }
+
+  .logo-footer img {
+    width: 130px;
+  }
+
+  .link-footer {
+    gap: 25px;
+    justify-content: space-around;
     width: 100%;
-    padding: 30px 20px;
+  }
+
+  .links p {
+    font-size: 0.9rem;
+  }
+
+  .links a {
+    font-size: 0.8rem;
+  }
+
+  .footer-credits {
+    font-size: 0.7rem;
+    padding-top: 15px;
   }
 }
+
