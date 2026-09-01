@@ -498,30 +498,31 @@ nav a:hover {
   height: 100%;
 }
 
-.timeline-line {
+.timeline-separator::before {
+  content: "";
   position: absolute;
   top: -20px;
   bottom: -20px;
   width: 1px;
   background-color: #ccc;
-  z-index: 1;
 }
 
-.lista-argomenti .timeline-wrapper:first-child .timeline-line {
-  top: 50%;
-}
-
-.lista-argomenti .timeline-wrapper:last-child .timeline-line {
-  bottom: 50%;
-}
-
-.timeline-dot {
+.timeline-separator::after {
+  content: "";
   width: 12px;
   height: 12px;
   background-color: var(--rosso);
   border-radius: 50%;
-  z-index: 2;
   box-shadow: 0 0 0 4px var(--grigio);
+  z-index: 1;
+}
+
+.timeline-wrapper:first-child .timeline-separator::before {
+  top: 50%;
+}
+
+.timeline-wrapper:last-child .timeline-separator::before {
+  bottom: 50%;
 }
 
 footer {
