@@ -128,7 +128,6 @@ nav a:hover {
   z-index: 1;
 }
 
-
 .immagine-card {
   transition: transform 0.5s ease;
 }
@@ -262,10 +261,12 @@ nav a:hover {
   position: relative;
   padding: 60px 25px 30px;
   color: #fff;
-  background: linear-gradient(to top,
-      rgba(0, 0, 0, 0.95) 0%,
-      rgba(0, 0, 0, 0.6) 50%,
-      transparent 100%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    transparent 100%
+  );
 }
 
 .testo-card h3 {
@@ -733,7 +734,7 @@ footer {
   color: #333;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 726px) and (max-width: 1200px) {
   header {
     padding: 0 30px;
   }
@@ -816,7 +817,7 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 726px) {
   header {
     height: 65px;
     padding: 0 20px;
@@ -846,16 +847,16 @@ footer {
     transition: all 0.3s ease;
   }
 
-  .menu-toggle:checked~.burger-btn span:nth-child(1) {
+  .menu-toggle:checked ~ .burger-btn span:nth-child(1) {
     transform: translateY(7.5px) rotate(45deg);
     background-color: var(--rosso);
   }
 
-  .menu-toggle:checked~.burger-btn span:nth-child(2) {
+  .menu-toggle:checked ~ .burger-btn span:nth-child(2) {
     opacity: 0;
   }
 
-  .menu-toggle:checked~.burger-btn span:nth-child(3) {
+  .menu-toggle:checked ~ .burger-btn span:nth-child(3) {
     transform: translateY(-7.5px) rotate(-45deg);
     background-color: var(--rosso);
   }
@@ -900,7 +901,7 @@ footer {
     border-bottom: none;
   }
 
-  .menu-toggle:checked~nav {
+  .menu-toggle:checked ~ nav {
     max-height: 240px;
     padding: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
