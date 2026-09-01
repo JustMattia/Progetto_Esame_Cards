@@ -731,7 +731,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-  /* Header & Burger Menu */
   header {
     height: 65px;
     padding: 0 20px;
@@ -821,7 +820,6 @@ footer {
     border-top: 1px solid rgba(0, 0, 0, 0.08);
   }
 
-  /* Hero: Testo nascosto e Titolo centrato */
   .hero {
     height: auto;
     min-height: 380px;
@@ -896,7 +894,6 @@ footer {
     line-height: 1.15;
   }
 
-  /* Card Categorie Home in Colonna */
   .categorie {
     height: auto;
     padding: 60px 20px;
@@ -911,7 +908,6 @@ footer {
     height: 380px;
   }
 
-  /* Banner Lo Hobbit */
   .banner-lo-hobbit,
   .immagine-banner {
     height: 300px;
@@ -930,7 +926,6 @@ footer {
     padding: 0;
   }
 
-  /* Articoli in evidenza in Colonna */
   .griglia-articoli {
     grid-template-columns: 1fr;
     row-gap: 30px;
@@ -938,7 +933,6 @@ footer {
     margin: 0 auto;
   }
 
-  /* Card Argomenti Categorie in Colonna */
   .card-argomento {
     flex-direction: column;
     max-width: 500px;
@@ -955,7 +949,6 @@ footer {
     padding: 30px 20px;
   }
 
-  /* Timeline Espansioni su Mobile */
   .timeline-wrapper {
     flex-direction: column;
     align-items: center;
@@ -984,7 +977,6 @@ footer {
     display: none;
   }
 
-  /* Sezione Leggi anche in Colonna */
   .griglia-leggi-anche {
     grid-template-columns: 1fr;
     gap: 25px;
@@ -996,7 +988,6 @@ footer {
     height: 180px;
   }
 
-  /* Card Chi Siamo in Colonna */
   .card_chisiamo {
     grid-template-columns: 1fr;
     gap: 25px;
@@ -1008,7 +999,6 @@ footer {
     height: 260px;
   }
 
-  /* Footer */
   .footer-content {
     flex-direction: column;
     gap: 35px;
