@@ -732,6 +732,89 @@ footer {
   color: #333;
 }
 
+@media (max-width: 1024px) {
+  header {
+    padding: 0 30px;
+  }
+
+  nav ul {
+    gap: 25px;
+  }
+
+  .contenuto-hero,
+  .contenuto-hero-categorie {
+    max-width: 65%;
+  }
+
+  .contenuto-hero p,
+  .contenuto-hero-categorie p {
+    font-size: 1.2rem;
+  }
+
+  .contenuto-hero-categorie h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-articolo-content h1 {
+    font-size: 3.2rem;
+  }
+
+  .categorie {
+    height: auto;
+    padding: 70px 30px;
+    gap: 25px;
+  }
+
+  .card-categorie {
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+  }
+
+  .testo-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .testo-card p {
+    font-size: 0.95rem;
+  }
+
+  .card-persona {
+    height: 200px;
+  }
+
+  .banner-lo-hobbit,
+  .immagine-banner {
+    height: 70vh;
+  }
+
+  .griglia-articoli {
+    column-gap: 30px;
+    row-gap: 40px;
+  }
+
+  .immagine-articolo {
+    height: 220px;
+  }
+
+  .timeline-wrapper {
+    max-width: 640px;
+  }
+
+  .timeline-side {
+    padding-right: 25px;
+  }
+
+  .timeline-year {
+    font-size: 1.8rem;
+    margin-right: 15px;
+  }
+
+  .link-footer {
+    gap: 50px;
+  }
+}
+
 @media (max-width: 768px) {
   header {
     height: 65px;
@@ -859,16 +942,13 @@ footer {
 
   .contenuto-hero-categorie {
     max-width: 100%;
-    text-align: center;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    text-align: center;
   }
 
   .contenuto-hero-categorie h1 {
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     margin: 0;
-    text-align: center;
   }
 
   .contenuto-hero-categorie p {
@@ -884,15 +964,14 @@ footer {
   }
 
   .hero-articolo-content {
+    width: 100%;
     justify-content: center;
     align-items: center;
-    width: 100%;
     text-align: center;
   }
 
   .hero-articolo-content h1 {
-    font-size: 2.6rem;
-    text-align: center;
+    font-size: 2.2rem;
     line-height: 1.15;
   }
 
@@ -901,13 +980,20 @@ footer {
     padding: 60px 20px;
     flex-direction: column;
     gap: 30px;
-    align-items: center;
   }
 
   .card-categorie {
     width: 100%;
     max-width: 340px;
-    height: 380px;
+    height: 360px;
+  }
+
+  .testo-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .testo-card p {
+    font-size: 1rem;
   }
 
   .banner-lo-hobbit,
@@ -928,11 +1014,29 @@ footer {
     padding: 0;
   }
 
+  .articoli-evidenza {
+    padding: 60px 20px;
+  }
+
+  .titolo-articoli {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+  }
+
   .griglia-articoli {
     grid-template-columns: 1fr;
     row-gap: 30px;
     max-width: 480px;
     margin: 0 auto;
+  }
+
+  .immagine-articolo {
+    height: 200px;
+  }
+
+  .lista-argomenti {
+    padding: 60px 20px;
+    gap: 30px;
   }
 
   .card-argomento {
@@ -951,6 +1055,14 @@ footer {
     padding: 30px 20px;
   }
 
+  .testo-argomento h2 {
+    font-size: 1.5rem;
+  }
+
+  .testo-argomento h5 {
+    margin-top: 25px;
+  }
+
   .timeline-wrapper {
     flex-direction: column;
     align-items: center;
@@ -959,24 +1071,50 @@ footer {
   }
 
   .timeline-side {
-    position: static;
-    right: auto;
-    top: auto;
-    bottom: auto;
-    padding-right: 0;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .timeline-year {
-    font-size: 1.6rem;
-    margin-right: 0;
-  }
-
-  .timeline-separator {
     display: none;
+  }
+
+  .dettagli-gioco {
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .dettaglio-item {
+    font-size: 1.1rem;
+  }
+
+  .dettaglio-item img {
+    width: 40px;
+  }
+
+  .contenuto-articolo {
+    margin: 40px auto;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .contenuto-articolo h2 {
+    font-size: 1.5rem;
+    margin: 35px 0 10px;
+  }
+
+  .contenuto-articolo p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .contenuto-articolo img {
+    margin: 30px 0 20px;
+  }
+
+  .contenuto-articolo .img-carta-singola,
+  .img-carta-singola {
+    max-width: 240px;
+    margin: 30px auto 25px;
+  }
+
+  .sezione-leggi-anche {
+    margin: 60px auto;
   }
 
   .griglia-leggi-anche {
@@ -999,6 +1137,10 @@ footer {
 
   .card-persona {
     height: 260px;
+  }
+
+  footer {
+    padding: 50px 20px 20px;
   }
 
   .footer-content {
