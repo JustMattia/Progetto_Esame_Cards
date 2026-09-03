@@ -14,7 +14,7 @@
 
 body {
   color: #000;
-  background-color: #fff;
+  background-color: var(--grigio);
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
 }
@@ -183,7 +183,7 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 6.5vw;
+  gap: 50px;
   background-color: #fff;
   overflow: hidden;
 }
@@ -191,8 +191,8 @@ nav a:hover {
 .card-categorie {
   position: relative;
   z-index: 2;
-  width: 17.5vw;
-  height: 25vw;
+  width: 22vw;
+  height: 30vw;
   border-radius: 16px;
   overflow: hidden;
   display: flex;
@@ -390,16 +390,25 @@ nav a:hover {
 }
 
 .articoli-evidenza {
-  max-width: 1100px;
   margin: 0 auto;
-  padding: 80px 20px;
+  max-width: 1800px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 60px 20px;
+  gap: 40px;
+}
+
+.articoli-evidenza .card-argomento {
+  max-width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
 .titolo-articoli {
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 60px;
+  margin: 40px auto 0px;
 }
 
 .griglia-articoli {
@@ -654,8 +663,8 @@ footer {
 }
 
 .contenuto-articolo p {
-  margin-bottom: 25px;
-  line-height: 2;
+  margin-bottom: 16px;
+  line-height: 1.6;
 }
 
 .contenuto-articolo ul {
@@ -664,7 +673,7 @@ footer {
 }
 
 .contenuto-articolo li {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   line-height: 1.6;
 }
 
@@ -735,7 +744,20 @@ footer {
   color: #333;
 }
 
-@media (min-width: 726px) and (max-width: 1200px) {
+.acceso {
+  color: var(--rosso);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+
+@media (min-width: 900px) and (max-width: 1450px) {
+  .articoli-evidenza {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 60px 40px;
+  }
+
   header {
     padding: 0 30px;
   }
@@ -824,12 +846,17 @@ footer {
   }
 }
 
-@media (max-width: 726px) {
+@media (max-width: 900px) {
   header {
     height: 65px;
     padding: 0 20px;
   }
 
+  .articoli-evidenza {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 60px 40px;
+  }
   .logo img {
     height: 32px;
   }
@@ -1016,10 +1043,6 @@ footer {
     font-size: 0;
   }
 
-  .articoli-evidenza {
-    padding: 60px 20px;
-  }
-
   .titolo-articoli {
     font-size: 1.6rem;
     margin-bottom: 40px;
@@ -1050,6 +1073,10 @@ footer {
     width: 100%;
     height: 220px;
     min-height: auto;
+  }
+
+  .immagine-argomento-container img {
+    object-position: center 15%;
   }
 
   .testo-argomento {
