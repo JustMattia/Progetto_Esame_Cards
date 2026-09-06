@@ -1065,12 +1065,12 @@ footer {
   .griglia-leggi-anche {
     grid-template-columns: 1fr;
     gap: 25px;
-    max-width: 380px;
+    max-width: 290px;
     margin: 0 auto;
   }
 
   .card-leggi-anche img {
-    height: 180px;
+    height: 140px;
   }
 
   .card_chisiamo {
@@ -1100,3 +1100,27 @@ footer {
     gap: 40px;
   }
 }
+
+@media (min-width: 1500px) {
+  .categorie {
+    gap: 75px;
+  }
+
+  .card-categorie {
+    width: 380px;
+    height: 520px;
+  }
+
+  .testo-card {
+    padding: 70px 30px 35px;
+  }
+
+  .testo-card h3 {
+    font-size: 1.85rem;
+  }
+
+  .testo-card p {
+    font-size: 1.2rem;
+  }
+}
+
