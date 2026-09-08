@@ -12,32 +12,43 @@
     <header>
       <div class="logo">
         <a href="../index.html">
-          <img src="../IMG/Logo Head.webp" alt="" />
+          <img src="../IMG/Logo Head.webp" alt="MagicTheArchive - Torna alla home" />
         </a>
       </div>
       <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-      <label for="menu-toggle" class="burger-btn" aria-label="Menu">
+      <label for="menu-toggle" class="burger-btn" aria-label="Apri menu di navigazione">
         <span></span>
         <span></span>
         <span></span>
       </label>
       <nav>
         <ul>
-          <li><a href="../Categorie/Gioco.html">Gioco</a></li>
-          <li><a href="../Categorie/Espansioni.html">Espansioni</a></li>
-          <li><a href="../Categorie/Formati.html">Formati</a></li>
+          <li><a href="Gioco.html">Gioco</a></li>
+          <li><a href="Espansioni.html">Espansioni</a></li>
+          <li><a href="Formati.html">Formati</a></li>
           <li>
-            <a href="../Categorie/Chi Siamo.html" class="acceso">Chi Siamo</a>
+            <a href="Chi Siamo.html" class="acceso">Chi Siamo</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main>
+      <nav aria-label="Percorso di navigazione" class="breadcrumbs">
+        <div class="breadcrumbs-container">
+          <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li class="separator" aria-hidden="true">/</li>
+            <li aria-current="page">Chi Siamo</li>
+          </ol>
+        </div>
+      </nav>
+
       <section class="hero-articolo">
         <img
           src="../IMG/Hero_Chi_Siamo.webp"
           alt=""
+          aria-hidden="true"
           class="sfondo-hero-articolo"
         />
         <div class="hero-articolo-content">
@@ -87,7 +98,7 @@
           target="_blank"
           class="card-persona"
         >
-          <img src="../IMG/MTT04823.webp" alt="" class="immagine-card" />
+          <img src="../IMG/MTT04823.webp" alt="Foto di Laura Benfante" class="immagine-card" />
           <div class="testo-card-persona">
             <h4>Laura Benfante</h4>
           </div>
@@ -98,7 +109,7 @@
           target="_blank"
           class="card-persona"
         >
-          <img src="../IMG/mattia.webp" alt="" class="immagine-card" />
+          <img src="../IMG/mattia.webp" alt="Foto di Mattia Santo Moltisanti" class="immagine-card" />
           <div class="testo-card-persona">
             <h4>Mattia Moltisanti</h4>
           </div>
@@ -109,59 +120,59 @@
           target="_blank"
           class="card-persona"
         >
-          <img src="../IMG/diego.webp" alt="" class="immagine-card" />
+          <img src="../IMG/diego.webp" alt="Foto di Diego Meli" class="immagine-card" />
           <div class="testo-card-persona">
             <h4>Diego Meli</h4>
           </div>
         </a>
       </section>
+
+      <section class="sezione-leggi-anche">
+        <h2 class="titolo-leggi-anche">Esplora il sito &darr;</h2>
+
+        <div class="griglia-leggi-anche">
+          <a href="Gioco.html" class="card-leggi-anche">
+            <img src="../IMG/Card Il Gioco piccola.webp" alt="Categoria Il Gioco" />
+            <h3>Il Gioco</h3>
+            <p>
+              Scopri il gioco di carte più famoso al mondo, dalla Storia alle
+              Regole.
+            </p>
+          </a>
+
+          <a href="Espansioni.html" class="card-leggi-anche">
+            <img src="../IMG/Card Esp.webp" alt="Categoria Le Espansioni" />
+            <h3>Le Espansioni</h3>
+            <p>Non perderti le ultime uscite, dagli esclusivi Secret Lair.</p>
+          </a>
+
+          <a href="Formati.html" class="card-leggi-anche">
+            <img src="../IMG/Card I Formati.webp" alt="Categoria I Formati" />
+            <h3>I Formati</h3>
+            <p>Costruisci il tuo mazzo e divertiti, dal Vintage al Commander.</p>
+          </a>
+        </div>
+      </section>
     </main>
-
-    <section class="sezione-leggi-anche">
-      <h2 class="titolo-leggi-anche">Esplora il sito &darr;</h2>
-
-      <div class="griglia-leggi-anche">
-        <a href="Gioco.html" class="card-leggi-anche">
-          <img src="../IMG/Card Il Gioco piccola.webp" alt="" />
-          <h3>Il Gioco</h3>
-          <p>
-            Scopri il gioco di carte più famoso al mondo, dalla Storia alle
-            Regole.
-          </p>
-        </a>
-
-        <a href="Espansioni.html" class="card-leggi-anche">
-          <img src="../IMG/Card Esp.webp" alt="" />
-          <h3>Le Espansioni</h3>
-          <p>Non perderti le ultime uscite, dagli esclusivi Secret Lair.</p>
-        </a>
-
-        <a href="Formati.html" class="card-leggi-anche">
-          <img src="../IMG/Card I Formati.webp" alt="" />
-          <h3>I Formati</h3>
-          <p>Costruisci il tuo mazzo e divertiti, dal Vintage al Commander.</p>
-        </a>
-      </div>
-    </section>
 
     <footer>
       <div class="footer-content">
         <div class="logo-footer">
           <a href="../index.html">
-            <img src="../IMG/Logo Footer.webp" alt="" width="160" />
+            <img src="../IMG/Logo Footer.webp" alt="MagicTheArchive - Logo del sito" width="160" />
           </a>
         </div>
         <div class="link-footer">
           <ul class="links">
             <p>SITO</p>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="../Categorie/Chi Siamo.html">Chi Siamo</a></li>
+            <li><a href="Chi Siamo.html">Chi Siamo</a></li>
           </ul>
           <ul class="links">
             <p>CATEGORIE</p>
-            <li><a href="../Categorie/Gioco.html">Gioco</a></li>
-            <li><a href="../Categorie/Espansioni.html">Espansioni</a></li>
-            <li><a href="../Categorie/Formati.html">Formati</a></li>
+            <li><a href="Gioco.html">Gioco</a></li>
+            <li><a href="Espansioni.html">Espansioni</a></li>
+            <li><a href="Formati.html">Formati</a></li>
           </ul>
         </div>
       </div>

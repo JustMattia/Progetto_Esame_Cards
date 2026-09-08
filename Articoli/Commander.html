@@ -11,11 +11,11 @@
     <header>
       <div class="logo">
         <a href="../index.html">
-          <img src="../IMG/Logo Head.webp" alt="" />
+          <img src="../IMG/Logo Head.webp" alt="MagicTheArchive - Torna alla home" />
         </a>
       </div>
       <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-      <label for="menu-toggle" class="burger-btn" aria-label="Menu">
+      <label for="menu-toggle" class="burger-btn" aria-label="Apri menu di navigazione">
         <span></span>
         <span></span>
         <span></span>
@@ -33,10 +33,23 @@
     </header>
 
     <main>
+      <nav aria-label="Percorso di navigazione" class="breadcrumbs">
+        <div class="breadcrumbs-container">
+          <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li class="separator" aria-hidden="true">/</li>
+            <li><a href="../Categorie/Formati.html">Formati</a></li>
+            <li class="separator" aria-hidden="true">/</li>
+            <li aria-current="page">Commander</li>
+          </ol>
+        </div>
+      </nav>
+
       <section class="hero-articolo">
         <img
           src="../IMG/Hero Commander.webp"
           alt=""
+          aria-hidden="true"
           class="sfondo-hero-articolo"
         />
         <div class="hero-articolo-content">
@@ -58,15 +71,15 @@
 
       <div class="dettagli-gioco">
         <div class="dettaglio-item">
-          <img src="../IMG/Icona Carte.webp" alt="" />
+          <img src="../IMG/Icona Carte.webp" alt="Numero di carte nel mazzo" />
           <span>100</span>
         </div>
         <div class="dettaglio-item">
-          <img src="../IMG/Icona Giocatori.webp" alt="" />
+          <img src="../IMG/Icona Giocatori.webp" alt="Numero di giocatori" />
           <span>2-4</span>
         </div>
         <div class="dettaglio-item">
-          <img src="../IMG/Icona Tempo.webp" alt="" />
+          <img src="../IMG/Icona Tempo.webp" alt="Durata media della partita" />
           <span>40-60 min</span>
         </div>
       </div>
@@ -85,7 +98,7 @@
           tuo mazzo sia legale!
         </p>
 
-        <img src="../IMG/Articoli/Mazzo Commander.webp" alt="" />
+        <img src="../IMG/Articoli/Mazzo Commander.webp" alt="Esempio di carte e mazzo per il formato Commander" />
 
         <h2>Perché Scegliere il Commander?</h2>
         <p>
@@ -116,7 +129,7 @@
           </li>
         </ul>
 
-        <img src="../IMG/Articoli/Tavolo Commander.webp" alt="" />
+        <img src="../IMG/Articoli/Tavolo Commander.webp" alt="Tavolo da gioco per una partita multiplayer in Commander" />
 
         <h2>Archetipi Storici</h2>
         <p>
@@ -133,7 +146,7 @@
           turno, riempiendo il campo di battaglia di bestie colossali pronte a
           incenerire le difese avversarie.
         </p>
-        <img src="../IMG/Articoli/UrDrago.webp" alt="" class="img-carta" />
+        <img src="../IMG/Articoli/UrDrago.webp" alt="Carta leggendaria L'Ur-Drago comandante tribale pentacolore" class="img-carta" />
 
         <p>
           <strong>Vivi Ornitier (Blu/Rosso - Spellslinger):</strong>Un mazzo
@@ -143,7 +156,7 @@
           un'enorme ondata di mana con cui scatenare letali tempeste magiche in
           un solo turno.
         </p>
-        <img src="../IMG/Articoli/Vivi.webp" alt="" class="img-carta" />
+        <img src="../IMG/Articoli/Vivi.webp" alt="Carta comandante Vivi Ornitier per mazzi spellslinger" class="img-carta" />
 
         <p>
           <strong>Ms. Bumbleflower (Verde/Bianco/Blu - Group Hug): </strong> Un
@@ -153,7 +166,7 @@
           creature con piogge di segnalini +1/+1, pronta a schiacciare l'intero
           tavolo quando nessuno se lo aspetta.
         </p>
-        <img src="../IMG/Articoli/Begonia.webp" alt="" class="img-carta" />
+        <img src="../IMG/Articoli/Begonia.webp" alt="Carta comandante Ms. Bumbleflower per mazzi group hug" class="img-carta" />
 
         <h2>Pronto a scendere in campo?</h2>
         <p>
@@ -165,48 +178,48 @@
           preparati a vivere le battaglie più epiche del Multiverso!
         </p>
       </section>
+
+      <section class="sezione-leggi-anche">
+        <h2 class="titolo-leggi-anche">Leggi anche &darr;</h2>
+
+        <div class="griglia-leggi-anche">
+          <a href="Standard.html" class="card-leggi-anche">
+            <img src="../IMG/Standard Card.webp" alt="Articolo Formato Standard" />
+            <h3>Standard</h3>
+            <p>
+              Il punto di partenza ideale e il formato più dinamico. Costruisci un
+              mazzo classico da 60 carte utilizzando esclusivamente le espansioni
+              più recenti.
+            </p>
+          </a>
+
+          <a href="Modern.html" class="card-leggi-anche">
+            <img src="../IMG/Modern.webp" alt="Articolo Formato Modern" />
+            <h3>Modern</h3>
+            <p>
+              Per chi ama un vasto arsenale e partite competitive. Esplora combo
+              letali combinando oltre vent'anni di carte storiche e strategie
+              senza tempo.
+            </p>
+          </a>
+
+          <a href="Pauper.html" class="card-leggi-anche">
+            <img src="../IMG/Pauper.webp" alt="Articolo Formato Pauper" />
+            <h3>Pauper</h3>
+            <p>
+              Pura abilità di deckbuilding al minimo costo. Metti alla prova le
+              tue doti strategiche in un formato di sole carte comuni!
+            </p>
+          </a>
+        </div>
+      </section>
     </main>
-
-    <section class="sezione-leggi-anche">
-      <h2 class="titolo-leggi-anche">Leggi anche &darr;</h2>
-
-      <div class="griglia-leggi-anche">
-        <a href="Standard.html" class="card-leggi-anche">
-          <img src="../IMG/Standard Card.webp" alt="" />
-          <h3>Standard</h3>
-          <p>
-            Il punto di partenza ideale e il formato più dinamico. Costruisci un
-            mazzo classico da 60 carte utilizzando esclusivamente le espansioni
-            più recenti.
-          </p>
-        </a>
-
-        <a href="Modern.html" class="card-leggi-anche">
-          <img src="../IMG/Modern.webp" alt="" />
-          <h3>Modern</h3>
-          <p>
-            Per chi ama un vasto arsenale e partite competitive. Esplora combo
-            letali combinando oltre vent'anni di carte storiche e strategie
-            senza tempo.
-          </p>
-        </a>
-
-        <a href="Pauper.html" class="card-leggi-anche">
-          <img src="../IMG/Pauper.webp" alt="" />
-          <h3>Pauper</h3>
-          <p>
-            Pura abilità di deckbuilding al minimo costo. Metti alla prova le
-            tue doti strategiche in un formato di sole carte comuni!
-          </p>
-        </a>
-      </div>
-    </section>
 
     <footer>
       <div class="footer-content">
         <div class="logo-footer">
           <a href="../index.html">
-            <img src="../IMG/Logo Footer.webp" alt="" width="160" />
+            <img src="../IMG/Logo Footer.webp" alt="MagicTheArchive - Logo del sito" width="160" />
           </a>
         </div>
         <div class="link-footer">

@@ -29,6 +29,15 @@ a {
   color: inherit;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+label:focus-visible {
+  outline: 2px solid var(--rosso);
+  outline-offset: 2px;
+}
+
+
 header {
   height: 70px;
   display: flex;
@@ -72,6 +81,61 @@ nav a {
 nav a:hover {
   color: var(--rosso);
 }
+
+.breadcrumbs {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.breadcrumbs-container {
+  width: 100%;
+  padding: 12px 50px;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.breadcrumbs a {
+  color: #444;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.breadcrumbs a:hover {
+  color: var(--rosso);
+  text-decoration: underline;
+}
+
+.breadcrumbs .separator {
+  color: #999;
+  user-select: none;
+  font-size: 0.85rem;
+}
+
+.breadcrumbs [aria-current="page"] {
+  color: var(--rosso);
+  font-weight: 700;
+}
+
 
 .hero,
 .hero-categorie,
@@ -770,6 +834,15 @@ footer {
   .logo img {
     height: 32px;
   }
+
+  .breadcrumbs-container {
+    padding: 10px 20px;
+  }
+
+  .breadcrumbs li {
+    font-size: 0.85rem;
+  }
+
 
   .burger-btn {
     display: flex;
